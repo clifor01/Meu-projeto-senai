@@ -1,0 +1,131 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //////RETANGULO
+            //string sinal = "#";
+            //int vertical = 3;
+            //int horizontal = 10;
+
+
+            //for (int y = 1; y <= vertical; y++)
+            //{
+            //    for (int x = 1; x <= horizontal; x++)
+            //    {
+            //        Console.Write(sinal);
+            //        System.Threading.Thread.Sleep(100);
+            //    }
+            //    Console.WriteLine();
+            //}
+
+
+            //Console.ReadLine();
+
+
+            ////ESCADA
+
+            //string sinal = "#";
+            //int horizontal = 5;
+            //int degraus = 10;
+            //string espaco = "";
+            //string linha = "";
+
+
+            //for (int y = 1; y <= degraus; y++)
+            //{
+            //    linha = "";
+
+            //    for (int x = 1; x <= horizontal; x++)
+            //    {
+
+            //        linha = linha + sinal;
+
+
+            //    }
+            //    Console.Write(espaco + linha);
+               
+            //    Console.WriteLine();
+
+            //    for (int x = 1; x <= horizontal; x++)
+            //    {
+            //        espaco = espaco + " ";
+            //    }
+
+            //    System.Threading.Thread.Sleep(300);
+            //}
+
+
+            //Console.ReadLine();
+
+
+
+            //IMprimir X
+
+            string sinal = "#";
+            int horizontal = 1;
+            int tamanho = 9;
+            string linha = "";
+            string espaco = "";
+            string espaco_lateral = "";
+            int resto = tamanho - 2;
+
+            for (int x = 1; x <= tamanho / 2; x++)
+            {
+                linha = "";
+                espaco = "";
+
+                for (int y = 1; y <= resto; y++)
+                {
+                    
+                    espaco = espaco + " ";
+                    
+                }
+
+                linha = espaco_lateral +sinal + espaco + sinal;
+                espaco_lateral = espaco_lateral + " ";
+                resto = resto - 2;
+
+ 
+                Console.WriteLine(linha);                
+            }
+
+            linha = espaco_lateral + sinal;
+            Console.WriteLine(linha);
+
+            resto = tamanho - 2;
+            for (int x = 1; x <= tamanho / 2; x++)
+            {
+                linha = "";
+                espaco = "";
+
+                for (int y = 1; y <= resto; y++)
+                {
+
+                   espaco = espaco + " ";
+
+                }
+
+                espaco = " ";
+                linha = espaco_lateral + sinal + espaco + sinal;
+                //espaco_lateral = espaco_lateral + " ";
+                resto = resto - 2;
+
+
+                Console.WriteLine(linha);
+            }
+
+
+                Console.ReadLine();
+
+        }
+
+    }
+}
